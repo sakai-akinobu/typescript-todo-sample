@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "$(npm bin)/webpack --config webpack.config.js"
+    "build": "$(npm bin)/webpack --config webpack.config.js",
+    "start": "$(npm bin)/webpack-dev-server --open"
   },
   "author": "Akinobu SAKAI <sakai.akinobu@gmail.com> (https://github.com/sakai-akinobu)",
   "license": "MIT",
