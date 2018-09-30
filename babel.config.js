@@ -4,5 +4,6 @@ module.exports = {
       targets: '>= 0.1%',
       useBuiltIns: 'usage'
     }],
+    '@babel/preset-typescript',
   ],
 };
