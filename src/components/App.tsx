@@ -6,12 +6,6 @@ import Input from './Input';
 import TodoList from './TodoList';
 import ClearCompletedButton from './ClearCompletedButton';
 
-// TODO This is a sample data.
-const todos: Todo[] = [
-  {title: 'foo', completed: false},
-  {title: 'bar', completed: true},
-];
-
 interface State {
   title: string;
   todos: Todo[];
@@ -23,7 +17,7 @@ export default class App extends React.Component<void, State> {
 
     this.state = {
       title: '',
-      todos,
+      todos: [],
     };
   }
 
