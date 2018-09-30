@@ -4,6 +4,7 @@ import immer from 'immer';
 import {Todo} from '../types';
 import Input from './Input';
 import TodoList from './TodoList';
+import ClearCompletedButton from './ClearCompletedButton';
 
 // TODO This is a sample data.
 const todos: Todo[] = [
@@ -55,6 +56,15 @@ export default class App extends React.Component<void, State> {
     });
   }
 
+  clearCompleted() {
+    this.setState(state => {
+      return immer(state, draft => {
+        draft.todos = draft.todos.filter(todo => !todo.completed);
+        return draft;
+      });
+    });
+  }
+
   render() {
     const {
       title,
@@ -63,6 +73,7 @@ export default class App extends React.Component<void, State> {
 
     return (
       <div>
+        <ClearCompletedButton onClick={this.clearCompleted.bind(this)} />
         <Input
           value={title}
           onChange={this.handleChangeTitle.bind(this)}
