@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import immer from 'immer';
 
 import {Todo} from '../types';
@@ -11,8 +11,8 @@ interface State {
   todos: Todo[];
 }
 
-export default class App extends React.Component<void, State> {
-  constructor(props) {
+export default class App extends React.Component<{}, State> {
+  constructor(props: {}) {
     super(props);
 
     this.state = {
