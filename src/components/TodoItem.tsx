@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
-import {Todo} from '../types';
+import {ITodo} from "../types";
 
-interface Props {
-  todo: Todo;
-  toggleComplete: (todo: Todo) => void,
-};
+interface IProps {
+  todo: ITodo;
+  toggleComplete: (todo: ITodo) => void;
+}
 
-export default function({todo, toggleComplete}: Props) {
+export default function({todo, toggleComplete}: IProps) {
   return (
     <li>
       <label>

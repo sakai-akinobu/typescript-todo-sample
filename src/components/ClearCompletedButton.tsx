@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 
-interface Props {
+interface IProps {
   onClick: () => void;
 }
 
-export default function({onClick}: Props) {
+export default function({onClick}: IProps) {
   return <button onClick={onClick}>Clear completed</button>;
 }

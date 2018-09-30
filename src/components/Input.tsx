@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-interface Props {
+interface IProps {
   value: string;
   onChange: (value: string) => void;
   onEnter: (value: string) => void;
@@ -8,13 +8,13 @@ interface Props {
 
 const ENTER_KEY_CODE = 13;
 
-export default function({value, onChange, onEnter}: Props) {
+export default function({value, onChange, onEnter}: IProps) {
   return (
     <input
       value={value}
-      onChange={e => onChange(e.target.value)}
+      onChange={(e) => onChange(e.target.value)}
       onKeyDown={(e) => {
-        if (e.keyCode == ENTER_KEY_CODE) {
+        if (e.keyCode === ENTER_KEY_CODE) {
           onEnter(value);
         }
       }}

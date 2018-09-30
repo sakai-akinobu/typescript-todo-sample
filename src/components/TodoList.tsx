@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from "react";
 
-import {Todo} from '../types';
-import TodoItem from './TodoItem';
+import {ITodo} from "../types";
+import TodoItem from "./TodoItem";
 
-interface Props {
-  todos: Todo[];
-  toggleComplete: (todo: Todo) => void,
-};
+interface IProps {
+  todos: ITodo[];
+  toggleComplete: (todo: ITodo) => void;
+}
 
-export default function({todos, toggleComplete}: Props) {
+export default function({todos, toggleComplete}: IProps) {
   return (
     <ul>
       {todos.map((todo, index) => (
