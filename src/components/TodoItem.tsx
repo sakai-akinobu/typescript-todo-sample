@@ -10,8 +10,10 @@ interface Props {
 export default function({todo, toggleComplete}: Props) {
   return (
     <li>
-      <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo)} />
-      <span>{todo.title}</span>
+      <label>
+        <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo)} />
+        <span>{todo.title}</span>
+      </label>
     </li>
   );
 }
