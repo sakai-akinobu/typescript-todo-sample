@@ -4,12 +4,13 @@ import {Todo} from '../types';
 
 interface Props {
   todo: Todo;
+  toggleComplete: (todo: Todo) => void,
 };
 
-export default function({todo}: Props) {
+export default function({todo, toggleComplete}: Props) {
   return (
     <li>
-      <input type="checkbox" defaultChecked={todo.completed} />
+      <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo)} />
       <span>{todo.title}</span>
     </li>
   );
